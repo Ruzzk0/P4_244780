@@ -4,4 +4,12 @@
     <string name="welcome_description">Home of the most wonderful
         desserst ever seen(and tasted) by the human being.</string>
     <string name="button_start">get  started!</string>
+    <string name="name">Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">e-mail</string>
+    <string name="password">Password</string>
+    <string name="terms">I have read and accept terms and conditions of The Cheezery</string>
+    <string name="sing_in">Sing in</string>
+
+    <!--se me olvido documentar por ver el video a la par, pero lo de aca ya es pal menu-->
 </resources>
