@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="input_margin">15dp</dimen>
-
+    <dimen name="menu_botton">20dp</dimen>
+    <dimen name="menu_bm">2dp</dimen>
+    <dimen name="menu_b_text">15dp</dimen>
+    <dimen name="menu_b_vertical">15dp</dimen>
 </resources>

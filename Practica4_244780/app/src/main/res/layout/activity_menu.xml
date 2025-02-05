@@ -17,7 +17,115 @@
         android:layout_marginTop="50dp"
         />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/our_menu"
+        android:textAllCaps="true"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
 
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="50dp">
+
+
+        <Button
+            android:id="@+id/button_cold_drinks"
+            android:text="@string/cold_drinks"
+            android:textColor="@color/dusty_white"
+            android:background="@drawable/first_gradient"
+            android:paddingHorizontal="@dimen/menu_botton"
+            android:layout_marginRight="@dimen/menu_bm"
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnWeight="1"
+            android:textSize="@dimen/menu_b_text"
+            android:paddingVertical="@dimen/menu_b_vertical"
+
+            />
+
+        <Button
+            android:id="@+id/button_hot_drinks"
+            android:text="@string/hot_drinks"
+            android:textColor="@color/dusty_white"
+            android:background="@drawable/first_gradient"
+            android:paddingHorizontal="@dimen/menu_botton"
+            android:layout_marginLeft="@dimen/menu_bm"
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnWeight="1"
+            android:textSize="@dimen/menu_b_text"
+            android:paddingVertical="@dimen/menu_b_vertical"
+
+            />
+
+
+        <Button
+            android:id="@+id/button_sweets"
+            android:text="@string/sweets"
+            android:textColor="@color/dusty_white"
+            android:background="@drawable/first_gradient"
+            android:paddingHorizontal="@dimen/menu_botton"
+            android:layout_marginRight="@dimen/menu_bm"
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnWeight="1"
+            android:textSize="@dimen/menu_b_text"
+            android:paddingVertical="@dimen/menu_b_vertical"
+
+            />
+
+        <Button
+            android:id="@+id/button_salties"
+            android:text="@string/salties"
+            android:textColor="@color/dusty_white"
+            android:background="@drawable/first_gradient"
+            android:paddingHorizontal="@dimen/menu_botton"
+            android:layout_marginLeft="@dimen/menu_bm"
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnWeight="1"
+            android:textSize="@dimen/menu_b_text"
+            android:paddingVertical="@dimen/menu_b_vertical"
+
+            />
+
+        <Button
+            android:id="@+id/button_combos"
+            android:text="@string/Combos"
+            android:textColor="@color/dusty_white"
+            android:background="@drawable/first_gradient"
+            android:paddingHorizontal="@dimen/menu_botton"
+            android:layout_marginRight="@dimen/menu_bm"
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnWeight="1"
+            android:textSize="@dimen/menu_b_text"
+            android:paddingVertical="@dimen/menu_b_vertical"
+
+            />
+
+        <Button
+            android:id="@+id/button_custom"
+            android:text="@string/customizable"
+            android:textColor="@color/dusty_white"
+            android:background="@drawable/first_gradient"
+            android:paddingHorizontal="@dimen/menu_botton"
+            android:layout_marginLeft="@dimen/menu_bm"
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnWeight="1"
+            android:textSize="@dimen/menu_b_text"
+            android:paddingVertical="@dimen/menu_b_vertical"
+
+            />
+
+
+
+
+    </GridLayout>
 
 
 </LinearLayout>

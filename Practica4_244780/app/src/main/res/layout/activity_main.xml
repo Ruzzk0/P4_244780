@@ -48,7 +48,7 @@
         android:background="@drawable/round_button"
         android:textColor="@color/white"
         android:layout_gravity="center_horizontal"
-
+        android:id="@+id/button_getStarted"
         />
 
 
