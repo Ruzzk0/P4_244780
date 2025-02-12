@@ -6,6 +6,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
+import android.widget.ListView
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -20,6 +23,11 @@ class ProductosActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_productos)
         agregaProductos()
+
+        var listView: ListView = findViewById(R.id.listview) as ListView
+
+        var adaptador: AdaptadorProductos = AdaptadorProductos(this,coldDrinks)
+        listView.adapter = adaptador
     }
 
     var coldDrinks = ArrayList<Product>()
@@ -77,10 +85,22 @@ class ProductosActivity : AppCompatActivity() {
             return position.toLong()
         }
 
-        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup?, p1:View?, p2: ViewGroup?): View {
             var prod = productos[position]
             var inflador = LayoutInflater.from(contexto)
             var visita = inflador.inflate(R.layout.producto_view, null)
+
+            var imagen = vista.findViewBy(R.id.producto_img) as ImageView
+            var nombre = vista.indViewBy(R.id.producto_nombre) as TextView
+            var desc = vista.indViewBy(R.id.producto_desc) as TextView
+            var precio = vista.indViewBy(R.id.producto_precio) as TextView
+
+            imagen.setImageResource(prod.image)
+            nombre.setText(prod.name)
+            desc.setText(prod.description)
+            precio.setText("$${prod.price}")
+
+            return vista
         }
 
     }
