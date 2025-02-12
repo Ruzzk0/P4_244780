@@ -63,15 +63,9 @@ class ProductosActivity : AppCompatActivity() {
         salties.add(Product("Philly Cheese Steak", R.drawable.phillycheesesteak, "Smothered in grilled onions, green peppers, mushrooms, and Provolone.", 6))
         salties.add(Product("Nachos", R.drawable.nachos, "Tortilla chips layered with beef and melted cheddar cheese. Served with fried beans, guacamole, pico de gallo, and sour topping.", 7))
     }
-
-    private class AdaptadorProductos:BaseAdapter{
-        var productos = ArrayList<Product>()
-        var contexto: Context? = null
-
-        constructor(contexto: Context, productos: ArrayList<Product> ){
-            this.productos = productos
-            this.contexto = contexto
-        }
+    private class AdaptadorProductos(contexto: Context, productos: ArrayList<Product>) : BaseAdapter() {
+        var productos = productos
+        var contexto: Context = contexto
 
         override fun getCount(): Int {
             return productos.size
@@ -85,23 +79,23 @@ class ProductosActivity : AppCompatActivity() {
             return position.toLong()
         }
 
-        override fun getView(position: Int, convertView: View?, parent: ViewGroup?, p1:View?, p2: ViewGroup?): View {
-            var prod = productos[position]
-            var inflador = LayoutInflater.from(contexto)
-            var visita = inflador.inflate(R.layout.producto_view, null)
+        override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
+            val prod = productos[position]
+            val inflador = LayoutInflater.from(contexto)
+            val vista = inflador.inflate(R.layout.producto_view, null)
 
-            var imagen = vista.findViewBy(R.id.producto_img) as ImageView
-            var nombre = vista.indViewBy(R.id.producto_nombre) as TextView
-            var desc = vista.indViewBy(R.id.producto_desc) as TextView
-            var precio = vista.indViewBy(R.id.producto_precio) as TextView
+            val imagen = vista.findViewById<ImageView>(R.id.producto_img)
+            val nombre = vista.findViewById<TextView>(R.id.producto_nombre)
+            val desc = vista.findViewById<TextView>(R.id.producto_desc)
+            val precio = vista.findViewById<TextView>(R.id.producto_precio)
 
             imagen.setImageResource(prod.image)
-            nombre.setText(prod.name)
-            desc.setText(prod.description)
-            precio.setText("$${prod.price}")
+            nombre.text = prod.name
+            desc.text = prod.description
+            precio.text = "$${prod.price}"
 
             return vista
         }
-
     }
+
 }
